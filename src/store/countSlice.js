@@ -30,6 +30,9 @@ const counterSlice =  createSlice({
 })
 
 
-export const counterActions = counterSlice.actions;
+// export const counterActions = counterSlice.actions;
+export const {increase, decrease} = counterSlice.actions;
 
-export default counterSlice.reducer;
+export default counterSlice.reducer;  // متنساش ال default بنستوردها بأي اسم
+
+// export const counterReducer = counterSlice.reducer;

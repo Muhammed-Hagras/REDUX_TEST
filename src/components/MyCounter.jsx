@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import { counterActions } from '../store/countSlice';
+import { increase, decrease}  from '../store/countSlice';
 
 
 export default function MyCounter() {
@@ -65,8 +65,8 @@ console.log(showCount)
       <>
       <p className='fw-bold '>Count : {count}</p>
       <div className="btns">
-      <button className="btn btn-success mx-3 px-3" onClick={()=> dispatch(counterActions.increase(4))}>Increase +</button>
-      <button className="btn btn-danger mx-3 px-3" onClick={() => dispatch(counterActions.decrease(2))}>Decrease -</button>
+      <button className="btn btn-success mx-3 px-3" onClick={()=> dispatch(increase(4))}>Increase +</button>
+      <button className="btn btn-danger mx-3 px-3" onClick={() => dispatch(decrease(2))}>Decrease -</button>
       </div>
       </>
       
